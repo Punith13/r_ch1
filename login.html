@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+         
+        <script>
+        
+        function loginCheck(){
+
+            var name = window.prompt("Enter Passcode", ""); 
+            if(name !== ''){
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+                }
+                xmlHttp.open("GET", '/check?passcode=' + name, true); // true for asynchronous 
+                xmlHttp.send(null);
+            }
+        }
+
+        function callback(response){
+
+            var response = JSON.parse(response); 
+
+            if( response.auth == "1"){
+                window.open("/auth" , true); 
+            }else{
+                alert("Wrong Passcode!!");
+            }
+
+
+        }
+        
+        </script>
+
+    </head>
+
+    <body onload="loginCheck()">
+
+    </body>
+</html>

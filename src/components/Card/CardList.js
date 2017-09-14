@@ -17,6 +17,10 @@ class CardList extends Component{
 
     renderList(){
 
+       if(this.props.listState.length == 0){
+           return "No Properties!"
+       }
+
        return this.props.listState.map( property => {
 
             return <CardComponent key={property.id} 

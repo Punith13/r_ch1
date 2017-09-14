@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "webpack -w", 
-    "build" : "webpack -p"
+    "start": "webpack -w",
+    "build": "webpack -p"
   },
   "author": "Punith Ujwal Nayak",
   "license": "ISC",
@@ -18,6 +18,8 @@
     "webpack": "^3.5.6"
   },
   "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
