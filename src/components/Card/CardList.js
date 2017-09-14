@@ -1,16 +1,21 @@
 import React , { Component } from 'react';
 import CardComponent from './CardComponent'; 
 
-class CardComponent extends Component{
+class CardList extends Component{
 
     constructor(props){
 
         super(props); 
     }
 
+    componentDidMount(){
+
+        this.props.loadInitialData(); 
+
+    }
     renderList(){
 
-        this.props.list.map( property => {
+       return this.props.listState.map( property => {
 
             return <CardComponent key={property.id} />
 

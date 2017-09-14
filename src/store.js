@@ -1,4 +1,4 @@
-import { createStore , combineReducers } from 'redux; 
+import { createStore , combineReducers } from 'redux'; 
 
 import ResultReducer from './components/Results/Reducer'; 
 

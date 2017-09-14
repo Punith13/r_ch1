@@ -25,7 +25,7 @@ class CardComponent extends Component{
             <div onMouseEnter={ () => this.showButton(true)} onMouseLeave= { () => this.showButton(false)}> 
 
 
-                <div style = {{ backgroundColor : props.backgroundColor }} className="logo" >
+                <div style = {{ backgroundColor : this.props.backgroundColor }} className="logo" >
 
                     <img className="logo-image" src={this.props.logo} />
 

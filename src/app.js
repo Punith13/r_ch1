@@ -3,15 +3,23 @@ import { render } from 'react-dom';
 import Header from './header'; 
 import Footer from './footer'; 
 
+import { Provider } from 'react-redux'; 
+import store from './store'; 
+
+import Results from './components/Results/ResultsContainer'; 
+
 const App = () => {
 
-return (
+    return (
 
-    <div>
-        <Header /> 
-        <Footer />  
-    </div>
-)
+        <div>
+            <Header /> 
+                <Results />
+            <Footer />  
+        </div>
+    )
 }
 
-render( <App /> , document.getElementById('root'));
+render( <Provider store={store} > 
+          <App /> 
+        </Provider> , document.getElementById('root'));
