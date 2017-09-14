@@ -7,6 +7,9 @@ import { Provider } from 'react-redux';
 import store from './store'; 
 
 import Results from './components/Results/ResultsContainer'; 
+import SavedProperties from './components/SavedProperties/SavedPropertiesContainer';
+
+import * as ActionTypes from './components/ActionTypes';
 
 const App = () => {
 
@@ -14,7 +17,10 @@ const App = () => {
 
         <div>
             <Header /> 
-                <Results />
+                <Results seed={ActionTypes.GET_INITIAL_RESULTS_DATA} 
+                         category ={'Results'} />
+                <SavedProperties seed={ActionTypes.GET_INITIAL_SAVED_PROPERTIES_DATA} 
+                         category = {'Saved Properties'} /> 
             <Footer />  
         </div>
     )

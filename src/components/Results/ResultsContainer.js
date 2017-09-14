@@ -6,8 +6,6 @@ import CardList from '../Card/CardList';
 
 const mapStateToProps = (state) => {
 
-    console.log(" in state" , state.resultState);
-
     return {
         listState : state.resultState
     }

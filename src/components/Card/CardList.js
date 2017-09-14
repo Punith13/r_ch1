@@ -10,7 +10,7 @@ class CardList extends Component{
 
     componentDidMount(){
 
-        this.props.loadInitialData(); 
+        this.props.loadInitialData(this.props.seed); 
 
     }
     renderList(){

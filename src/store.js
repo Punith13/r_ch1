@@ -1,10 +1,12 @@
 import { createStore , combineReducers } from 'redux'; 
 
 import ResultReducer from './components/Results/Reducer'; 
+import savedPropertyReducer from './components/SavedProperties/Reducer';
 
 let rootReducer = combineReducers({
 
-    resultState : ResultReducer 
+    resultState : ResultReducer ,
+    savedPropertyState : savedPropertyReducer
 
 });
 
