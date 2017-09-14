@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { connect } from 'react-redux'; 
-import { loadInitialData } from '../Actions';
+import { loadInitialData , buttonAction } from '../Actions';
 
 import CardList from '../Card/CardList'; 
 
@@ -14,4 +14,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps , { loadInitialData } )(CardList); 
+export default connect(mapStateToProps , { loadInitialData , buttonAction } )(CardList); 

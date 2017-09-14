@@ -14,6 +14,7 @@ class CardList extends Component{
 
     }
 
+
     renderList(){
 
        return this.props.listState.map( property => {
@@ -24,7 +25,8 @@ class CardList extends Component{
                                   buttonClass = {this.props.buttonClass} 
                                   imageSrc={property.mainImage} 
                                   price={property.price} 
-                                  buttonName = {this.props.buttonName} />
+                                  buttonName = {this.props.buttonName} 
+                                  buttonAction = { () => this.props.buttonAction(property , this.props.buttonActionType)} />
 
         });
     }

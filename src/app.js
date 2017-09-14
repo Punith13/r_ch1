@@ -19,10 +19,12 @@ const App = () => {
             <Header /> 
                 <Results seed={ActionTypes.GET_INITIAL_RESULTS_DATA} 
                          category ={'Results'} 
+                         buttonActionType = {'Add'}
                          buttonClass= {'btn add'} 
                          buttonName = {'Add Property'}/>
                 <SavedProperties seed={ActionTypes.GET_INITIAL_SAVED_PROPERTIES_DATA} 
                          category = {'Saved Properties'} 
+                         buttonActionType = {'Remove'}
                          buttonClass= {'btn remove'}
                          buttonName = {'Remove Property'} /> 
             <Footer />  

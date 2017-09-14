@@ -28,3 +28,23 @@ export const loadInitialData = (seed) => {
 
 }
 
+export const buttonAction = (property , type ) => {
+
+ console.log("reaching buttonAction");
+
+  switch(type){
+
+    case 'Add' : 
+     return{
+         type : ActionTypes.ADD_TO_SAVED, 
+         payload : property
+     }
+     break; 
+     case 'Remove': 
+     return{
+         type : ActionTypes.REMOVE_FROM_SAVED, 
+         payload : property
+     }
+  }
+
+}
