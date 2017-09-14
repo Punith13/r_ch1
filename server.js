@@ -16,7 +16,7 @@ app.use(express.static(__dirname));
 
 app.get("/", function(req, res){ 
     authflag = false; 
-    
+
    res.writeHead(200,{"Context-Type":"text/html"});
 	fs.createReadStream("login.html").pipe(res);
 });
@@ -38,6 +38,7 @@ app.get('/auth' , function(req , res){
     if(authflag){
         res.writeHead(200,{"Context-Type":"text/html"});
         fs.createReadStream("content.html").pipe(res);
+        authflag = false;
     }
 
 });
