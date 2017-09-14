@@ -33,7 +33,7 @@ class CardList extends Component{
 
         return(
             <div style={{ float : 'left'}} >
-                <h3>{this.props.category}</h3>
+                <h3 style={{marginLeft : '30px'}} >{this.props.category}</h3>
                 <ul>
                     {this.renderList()}
                 </ul>

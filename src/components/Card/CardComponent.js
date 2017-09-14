@@ -14,6 +14,8 @@ class CardComponent extends Component{
 
     showButton(flag){
 
+        console.log("reaced showbutton" , flag)
+
         this.setState( { showButtonFlag : flag } ); 
     }
 
@@ -35,9 +37,9 @@ class CardComponent extends Component{
                 <div className="price">
                    <label> {this.props.price} </label>
 
-                   { this.showButtonFlag && <button className={this.props.buttonClass} onClick={ () =>  this.props.buttonAction}> </button> }
-
                 </div>
+
+                { this.state.showButtonFlag && <div className="btn-div"> <button className={this.props.buttonClass} onClick={ () =>  this.props.buttonAction}> {this.props.buttonName} </button> </div>}
 
             </div>
 
