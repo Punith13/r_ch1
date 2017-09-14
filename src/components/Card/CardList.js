@@ -13,11 +13,18 @@ class CardList extends Component{
         this.props.loadInitialData(this.props.seed); 
 
     }
+
     renderList(){
 
        return this.props.listState.map( property => {
 
-            return <CardComponent key={property.id} />
+            return <CardComponent key={property.id} 
+                                  backgroundColor = {property.agency.brandingColors.primary} 
+                                  logo = {property.agency.logo} 
+                                  buttonClass = {this.props.buttonClass} 
+                                  imageSrc={property.mainImage} 
+                                  price={property.price} 
+                                  buttonName = {this.props.buttonName} />
 
         });
     }
@@ -25,7 +32,7 @@ class CardList extends Component{
     render(){
 
         return(
-            <div>
+            <div style={{ float : 'left'}} >
                 <h3>{this.props.category}</h3>
                 <ul>
                     {this.renderList()}

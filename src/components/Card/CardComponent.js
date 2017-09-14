@@ -22,8 +22,7 @@ class CardComponent extends Component{
 
         return(
 
-            <div onMouseEnter={ () => this.showButton(true)} onMouseLeave= { () => this.showButton(false)}> 
-
+            <div className="cardComponent" onMouseEnter={ () => this.showButton(true)} onMouseLeave= { () => this.showButton(false)}> 
 
                 <div style = {{ backgroundColor : this.props.backgroundColor }} className="logo" >
 

@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
 
-        <h3>End of challenge</h3>
+        <h3 style={{ clear : 'left'}} >End of challenge</h3>
 
     )
 

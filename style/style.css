@@ -1,0 +1,25 @@
+.cardComponent{
+    width : 250px; 
+    height: 350px; 
+    border : 1px solid #000; 
+    border-radius: 15px;
+    margin-bottom: 20px; 
+}
+
+.logo{
+        width:  250px; 
+        height: 60px;
+        border-top-left-radius: 15px; 
+        border-top-right-radius: 15px;
+ }
+
+ .logo-image{
+    margin : 10px 0 0 10px;
+    width: 200px; 
+    height: 50px;
+}
+
+.card-image{
+    width : 250px;
+    height : 250px;
+}
