@@ -4,7 +4,9 @@
   "description": "Real Estate UI challenge to demonstrate skills in React, Javascript",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "webpack -w", 
+    "build" : "webpack -p"
   },
   "author": "Punith Ujwal Nayak",
   "license": "ISC",
@@ -14,5 +16,11 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "webpack": "^3.5.6"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   }
 }
