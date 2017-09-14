@@ -1,0 +1,11 @@
+{
+  "name": "rea_ui_challenge",
+  "version": "1.0.0",
+  "description": "Real Estate UI challenge to demonstrate skills in React, Javascript",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Punith Ujwal Nayak",
+  "license": "ISC"
+}
