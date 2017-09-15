@@ -3,13 +3,14 @@ import Results from '../src/components/Results/ResultsContainer';
 import SavedProperties from '../src/components/SavedProperties/SavedPropertiesContainer';
 import {INITIAL_RESULTS_DATA} from '../src/backendResultData'; 
 import {INITIAL_SAVED_PROPERTIES_DATA } from'../src/backendSavedPropertyData'; 
+import * as ActionTypes from '../src/components/ActionTypes';
 
 import store from '../src/store'; 
 
-describe('a passing test', () => {
+describe('REA UI Challenge Test Suite', () => {
 
     const props = {
-        seed: 'GET_INITIAL_RESULTS_DATA',
+        seed: ActionTypes.GET_INITIAL_RESULTS_DATA,
         category: 'Results',
         buttonActionType: 'Add',
         buttonClass: 'btn add',
@@ -28,7 +29,7 @@ describe('a passing test', () => {
     }); 
 
     const savedProps = {
-        seed: 'GET_INITIAL_SAVED_PROPERTIES_DATA',
+        seed: ActionTypes.GET_INITIAL_SAVED_PROPERTIES_DATA,
         category: 'Saved Properties',
         buttonActionType: 'Remove',
         buttonClass: 'btn remove',
@@ -36,7 +37,7 @@ describe('a passing test', () => {
         store : store
     }
 
-    let savedPropertiesData = INITIAL_SAVED_PROPERTIES_DATA.length; 
+    const savedPropertiesData = INITIAL_SAVED_PROPERTIES_DATA.length; 
     
     const savedProperties = mount( <SavedProperties {...savedProps} />); 
 
@@ -46,7 +47,7 @@ describe('a passing test', () => {
         
     }); 
 
-    it('Simulates Saving a property by clicking on Add Property Button and checking for increase in Saved Properties Length' , () => {
+    it('Simulates Saving a property by clicking on Add Property Button on a Result Card  and checking for increase in Saved Properties Length' , () => {
 
 
         results.find('.cardComponent').first().simulate('mouseEnter');
@@ -57,7 +58,7 @@ describe('a passing test', () => {
     }); 
 
 
-    it('Simulates Removing a property by clicking on Remove Property Button and checking for decrease in Saved Properties Length' , () => {
+    it('Simulates Removing a property by clicking on Remove Property Button on a Saved Property Card and checking for decrease in Saved Properties Length' , () => {
         
         
         savedProperties.find('.cardComponent').first().simulate('mouseEnter');
@@ -66,8 +67,5 @@ describe('a passing test', () => {
         expect(savedProperties.find('.cardComponent')).to.have.length(savedPropertiesData);
         
     }); 
-
-
-
 
   });
