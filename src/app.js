@@ -32,6 +32,8 @@ const App = () => {
     )
 }
 
+export default App; 
+
 render( <Provider store={store} > 
           <App /> 
         </Provider> , document.getElementById('root'));
