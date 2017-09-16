@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive",
     "tdd": "npm test -- --watch",
     "start": "webpack -w",
-    "build": "webpack -p"
+    "build": "webpack"
   },
   "author": "Punith Ujwal Nayak",
   "license": "ISC",
