@@ -22,7 +22,7 @@ Navigate to the root folder and run the following commands
 > node server.js 
 ```
 
-The application would be running on <a href="http://localhost:3004"> Port 3004 </a>
+The application would be running on [Port 3004](http://localhost:3004)
 
 #### Testing the Project 
 
