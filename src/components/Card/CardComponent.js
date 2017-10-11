@@ -20,24 +20,26 @@ class CardComponent extends Component{
 
     render(){
 
+        const { backgroundColor , logo , imageSrc , price , buttonClass , buttonAction , buttonName } = this.props; 
+
         return(
 
             <div className="cardComponent" onMouseEnter={ () => this.showButton(true)} onMouseLeave= { () => this.showButton(false)}> 
 
-                <div style = {{ backgroundColor : this.props.backgroundColor }} className="logo" >
+                <div style = {{ backgroundColor }} className="logo" >
 
-                    <img className="logo-image" src={this.props.logo} />
+                    <img className="logo-image" src={ logo } />
 
                 </div>
 
-                <img className="card-image" src={this.props.imageSrc} /> 
+                <img className="card-image" src={ imageSrc } /> 
 
                 <div className="price">
-                   <label> {this.props.price} </label>
+                   <label> { price } </label>
 
                 </div>
 
-                { this.state.showButtonFlag && <div className="btn-div"> <button className={this.props.buttonClass} onClick={this.props.buttonAction}> {this.props.buttonName} </button> </div>}
+                { this.state.showButtonFlag && <div className="btn-div"> <button className={buttonClass} onClick={ buttonAction}> { buttonName} </button> </div>}
 
             </div>
 
